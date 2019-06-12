@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:Article:supprimer{% endblock %}
+
+{% block body %}
+    <h1> ma liste d'article en base de donnée après suppression</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Categorie</th>
+            <th>Date </th>
+            <th>Nombre</th>
+            <th>Commentaire</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        {% for key,article in article %}
+            <tbody>
+            <tr>
+                <td>{{ article.getNom() }}</td>
+                <td>{{ article.getCategorie() }}</td>
+                <td>{{ article.getDate|date("m/d/Y H:i") }}</td>
+                <td>{{ article.getNombre() }}</td>
+                <td>{{ article.getCommentaire() }}</td>
+
+            </tr>
+
+            </tbody>
+
+        {% endfor %}
+
+    </table>
+{% endblock %}

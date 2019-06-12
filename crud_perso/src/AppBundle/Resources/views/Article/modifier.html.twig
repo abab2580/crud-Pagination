@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:Article:modifier{% endblock %}
+
+{% block body %}
+<h1>Article à modifier</h1>
+    {% for user in users %}
+        <p><a href="{{ path('modifier', {'id':user.id}) }}">{{ user.nom }}
+                {{ user.categorie }}
+                 {{ user.date }}
+                {{ user.nombre }}
+                {{ user.commentaire }}
+            </a></p>
+
+    {% endfor %}
+{% endblock %}

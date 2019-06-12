@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:Client:view{% endblock %}
+
+{% block body %}
+    <table>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Adresse</th>
+            <th>Numero</th>
+        </tr>
+        </thead>
+        {% for key,client in client %}
+            <tbody>
+            <tr>
+                <td>{{ client.getNom() }}</td>
+                <td>{{ client.getAdresse() }}</td>
+                <td>{{ client.getNumero()}}</td>
+
+
+            </tr>
+
+            </tbody>
+
+        {% endfor %}
+
+    </table>
+{% endblock %}

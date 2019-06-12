@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- <nav>
+         <div id="navigation" >
+         <ul id="colornav">
+
+           <!-style="
+                    display: flex;
+
+                    font-style: arial, sans-serif;
+                    font-size: 25px;
+                    list-style-type: none;
+                    margin-right:   5px;
+                    text-decoration: none;
+                    border: 1px solid blue;
+                      word-spacing: 25px;
+
+
+         "
+             <li ><a href="contenu.php">Accueil</a></li>
+             <li ><a href="abab.php">Blog</a></li>
+             <li><a href="moncv.php">MonCV</a></li>
+             <li><a href="contact.php">Contact</a></li>
+             <li><a href="#">MesPhotos</a></li>
+
+         </ul>
+     </div>
+     </nav>-->
+
+    <div id="navigation" >
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="contenu.php">Accueil</a>
+                    <a class="nav-item nav-link" href="moncv.php">Moncv</a>
+                    <a class="nav-item nav-link" href="contact.php">Contact</a>
+                    <a class="nav-item nav-link active" href="abab.php">Projets <span class="sr-only"></span></a>
+                    <a class="nav-item nav-link disabled" href="photo.php" tabindex="-1" aria-disabled="true">Photo</a>
+            </div>
+        </div>
+        </nav>
+        <div id="logo">
+            <img src="logo.png">
+        </div>
+    </div>
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="fr">
+    <meta charset="utf-8">
+
+    <head>
+        <title>saidou hodi</title>
+        <!--ma barre de navigation-->
+        <?php include("navigation.php");?>
+    </head>
+
+
+    <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!--ma citation du jours-->
+    <blockquote>
+
+        <p>
+            La révolution informatique fait gagner un temps fou aux hommes, mais ils le passent avec leur ordinateur !
+        </p>
+    </blockquote>
+
+    <div id="sectionauteur">
+
+        <!--Bref présentation-->
+        <div id="auteur">
+            <h1>A propos </h1><br>
+            <p id="photo_saidou"><img src="image/baba.jpg" alt="toph baba" /></p>
+            <p>laissez moi le temps de me présenté: je m'appelle Saidou passioné d'informatique et de nouvelle technologie.</p>
+            <p>Je souhaiterais desormais en faire mon métier. Après plsieurs année d'expérience dans le domaine terciaire et d'études en Biologie(Pharmacologie, Physiologie). </p>.
+            <p><em>je me suis reconvertis</em> dans la programation et conception de site internet et application mobile.</p>
+            <p>Actuellement en formation à M2I FORMATION dans le but d'acquérir rapidement toutes les connaissances technique réquise afin de les appliquer dans ce cadre, sur des projet professionels concluants.</p>
+            <p>  </p><br>
+
+        </div>
+
+        <!---traitement avec caroussel-->
+
+    </div>
+
+    </body>
+    <hr>
+    <!--mon pied de page-->
+
+    <footer>
+        <?php include("footer.php");?>
+    </footer>
+
+    </html>
+
+
+
+
+
+
+
+
+
+
+    <div id="footer">
+        <?php
+				$jours=date('d');
+				$mois=date('m');
+				$annee=date('Y');
+				$heure=date('H');
+				$minute=date('i');
+				echo"Bonjour nous somme le  $jours  / $mois / $annee  et il est  $heure  h  $minute <br/>";
+
+        ?>
+        <p>tout droit de reproduction est reservé</p>
+        <p>
+            <a href="https://www.facebook.com/saidou.hodi.5" target="_blank">
+                <img src="image/facebook.png" alt="facebook" /></a>
+            <a href="https://www.linkedin.com/in/bi-alidou-saidou-hodi-36b18511b/ " target="_blank"><img src="image/linkedin.png" alt="linkedin" /></a>
+            <img src="image/rss.png" alt="rss" />
+            <a href="https://twitter.com/SaidouHodi" target="_blank">
+                <img src="image/twitter.png" alt="twitter" /></a>
+            <img src="image/vimeo.png" alt="vimeo" /></p>
+        <p><a href="mailto:saidouhodi@yahoo.fr" style="color: red;">cliqué ici pour envoyer un mail</a></p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+{% endblock %}
