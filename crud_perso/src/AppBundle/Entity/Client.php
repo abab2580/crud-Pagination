@@ -47,21 +47,7 @@ class Client
      */
     private $Article;
 
-    /**
-     * @return mixed
-     */
-    public function getArticle()
-    {
-        return $this->Article;
-    }
 
-    /**
-     * @param mixed $Article
-     */
-    public function setArticle($Article)
-    {
-        $this->Article = $Article;
-    }
 
 
 
@@ -146,4 +132,36 @@ class Client
     {
         return $this->numero;
     }
+
+    /**
+     * Add article
+     *
+     * @param \AppBundle\Entity\Article $article
+     *
+     * @return Client
+     */
+    public function addArticle(\AppBundle\Entity\Article $article)
+    {
+        $this->article[] = $article;
+
+        return $this;
+    }
+
+    /**
+     * Remove article
+     *
+     * @param \AppBundle\Entity\Article $article
+     */
+    public function removeArticle(\AppBundle\Entity\Article $article)
+    {
+        $this->article->removeElement($article);
+    }
+    /**
+     * @return mixed
+     */
+    public function getArticle()
+    {
+        return $this->Article;
+    }
+
 }

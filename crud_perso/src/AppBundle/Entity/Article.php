@@ -63,6 +63,16 @@ class Article
     private $Client;
 
     /**
+     * Constructor
+     */
+
+
+    public function __toString()
+    {
+        return (string) $this->commentaire;
+    }
+
+    /**
      * @return mixed
      */
     public function getClient()
@@ -70,13 +80,6 @@ class Article
         return $this->Client;
     }
 
-    /**
-     * @param mixed $Client
-     */
-    public function setClient($Client)
-    {
-        $this->Client = $Client;
-    }
 
 
     /**
@@ -208,4 +211,30 @@ class Article
     {
         return $this->commentaire;
     }
+
+    /**
+     * Add client
+     *
+     * @param \AppBundle\Entity\Client $client
+     *
+     * @return Article
+     */
+    public function addClient(\AppBundle\Entity\Client $client)
+    {
+        $this->client[] = $client;
+
+        return $this;
+    }
+
+    /**
+     * Remove client
+     *
+     * @param \AppBundle\Entity\Client $client
+     */
+    public function removeClient(\AppBundle\Entity\Client $client)
+    {
+        $this->client->removeElement($client);
+    }
+
+
 }

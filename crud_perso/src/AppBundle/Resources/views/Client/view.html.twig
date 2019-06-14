@@ -9,6 +9,7 @@
             <th>Nom</th>
             <th>Adresse</th>
             <th>Numero</th>
+            <th>article choisi</th>
         </tr>
         </thead>
         {% for key,client in client %}
@@ -18,8 +19,10 @@
                 <td>{{ client.getAdresse() }}</td>
                 <td>{{ client.getNumero()}}</td>
 
-
+                <td><a href="{{ path('insert', {'id':client.id} ) }}">ajouter
+                    </a></td>
             </tr>
+
 
             </tbody>
 

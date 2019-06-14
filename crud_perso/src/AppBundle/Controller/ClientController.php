@@ -20,7 +20,7 @@ class ClientController extends Controller
         if ($client == null) {
             return $this->redirectToRoute('insert');
         } else {
-            return $this->render('@App/Article/view.html.twig', array(
+            return $this->render('@App/Client/view.html.twig', array(
                 'client' => $client
             ));
         }

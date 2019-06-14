@@ -18,4 +18,17 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
+
+
+
+    /**
+     * @Route("/acceuil", name="acceuil")
+     */
+    public function acceuilAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('@App/Article/acceuil.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
 }

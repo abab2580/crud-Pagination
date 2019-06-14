@@ -7,11 +7,15 @@
     <br><br>
 
     {{ form_start(formClient) }}
+
+
     {{ form_row(formClient.nom) }}
     {{ form_row(formClient.adresse) }}
     {{ form_row(formClient.numero) }}
 
+
     <input type="submit" value="Enregistrer un nouveau client" />
 
     {{ form_end(formClient) }}
+
 {% endblock %}

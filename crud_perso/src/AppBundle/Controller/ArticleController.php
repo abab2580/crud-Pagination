@@ -54,8 +54,6 @@ class ArticleController extends Controller
         }
 
 
-        return $this->render('@App/Article/ajouter.html.twig', array(// ...
-        ));
     }
 
     /**
