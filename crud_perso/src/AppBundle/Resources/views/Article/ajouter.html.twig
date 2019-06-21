@@ -9,15 +9,18 @@
 {% block body %}
     <h1>Ajouter un article</h1>
     <br><br>
+<fieldset name="formulaire">
+    {{ form_start(formArticle) }}<br>
+    {{ form_row(formArticle.nom) }}<br>
+    {{ form_row(formArticle.categorie) }}<br>
+    {{ form_row(formArticle.date) }}<br>
+    {{ form_row(formArticle.nombre) }}<br>
+    {{ form_row(formArticle.commentaire) }}<br>
 
-    {{ form_start(formArticle) }}
-    {{ form_row(formArticle.nom) }}
-    {{ form_row(formArticle.categorie) }}
-    {{ form_row(formArticle.date) }}
-    {{ form_row(formArticle.nombre) }}
-    {{ form_row(formArticle.commentaire) }}
-
-    <input type="submit" value="Enregistrer un nouveau article" />
+    <input type="submit" value="Enregistrer un article" />
 
     {{ form_end(formArticle) }}
+
+</fieldset>
+
 {% endblock %}

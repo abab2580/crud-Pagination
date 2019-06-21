@@ -13,10 +13,11 @@ class ArticleController extends Controller
     /**
      * @Route("/afficher", name="afficher")
      */
-    public function afficherAction()
+    public function afficherAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $article = $em->getRepository('AppBundle:Article')->findAll();
+
         if ($article == null) {
             return $this->redirectToRoute('ajouter');
         } else {

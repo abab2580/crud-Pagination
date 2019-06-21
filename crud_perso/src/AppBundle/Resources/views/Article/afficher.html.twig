@@ -1,11 +1,13 @@
 {% extends "base.html.twig" %}
  {% block stylesheets %}
      <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+
  {% endblock %}
 
 {% block title %}AppBundle:Article:afficher{% endblock %}
 
 {% block body %}
+<a href="{{ path('ajouter') }}">ACCEUIL
 <h1> ma liste d'article en base de donnée</h1>
     <table>
         <thead>
@@ -43,4 +45,6 @@
         {% endfor %}
 
     </table>
+
+
 {% endblock %}
