@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %}supprimer{% endblock %}
+
+{% block body %}
+    {% for key, stagiaire in stagiaire %}
+    <td>{{ stagiaire.getNom() }}</td>
+    <td>{{ stagiaire.getPrenom() }}</td>
+    <td>{{ stagiaire.getAdresseMail() }}</td>
+    {% endfor %}
+
+{% endblock %}

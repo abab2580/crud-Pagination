@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:UtilisteurStagiaire:modifierstagiaire{% endblock %}
+
+{% block body %}
+    {% for stagiaire in stagiaires %}
+        <p><a href="{{ path('modifierstagiaire', {'id':stagiaire.id}) }}">{{ stagiaire.nom }}
+                {{ stagiaire.prenom }}
+                {{ stagiaire.adresseMail }}
+            </a></p>
+
+    {% endfor %}
+{% endblock %}

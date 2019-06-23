@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}stagiaire{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un stagiaire</h1>
+    <br><br>
+    <fieldset name="formulaire">
+        {{ form_start(formUtilisateurStagiaire) }}
+
+            {{ form_row(formUtilisateurStagiaire.nom) }}<br>
+            {{ form_row(formUtilisateurStagiaire.prenom) }}<br>
+            {{ form_row(formUtilisateurStagiaire.adresseMail) }}<br>
+
+            <input type="submit" value="Enregistrer" />
+
+        {{ form_end(formUtilisateurStagiaire) }}
+
+    </fieldset>
+
+{% endblock %}

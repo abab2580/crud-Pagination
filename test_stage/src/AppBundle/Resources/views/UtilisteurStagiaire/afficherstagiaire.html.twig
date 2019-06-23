@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+
+{% block title %}afficher{% endblock %}
+
+{% block body %}
+
+ {% for key, stagiaire in stagiaire %}
+
+<table>
+ <thead>
+ <tr>
+  <th>Nom</th>
+  <th>Prenom</th>
+  <th>Adresse mail </th>
+     <th>Action</th>
+<tbody>
+<tr><br>
+    <td>{{ stagiaire.getNom() }}</td>
+    <td>{{ stagiaire.getPrenom() }}</td>
+    <td>{{ stagiaire.getAdresseMail() }}</td>
+
+    <td><a href="{{ path('ajouterstagiaire', {'id':stagiaire.id} ) }}">ajouter
+    </a></td>
+
+    <td><a href="{{ path('modifierstagiaire', {'id':stagiaire.id} ) }}">modifier
+        </a></td>
+
+    <td><a href="{{ path('supprimerstagiaire', {'id':stagiaire.id} ) }}">supprimer
+        </a></td>
+
+ </tr>
+ </tbody>
+    {% endfor %}
+ </table>
+
+
+{% endblock %}
